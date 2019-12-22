@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    simple_auth (0.1.0)
+    simple_jwt_auth (0.1.0)
       bcrypt (~> 3.1.7)
       jwt
       rails (~> 6.0.2)
@@ -141,7 +141,7 @@ PLATFORMS
 
 DEPENDENCIES
   pg
-  simple_auth!
+  simple_jwt_auth!
 
 BUNDLED WITH
    2.0.2

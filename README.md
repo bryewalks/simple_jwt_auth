@@ -1,4 +1,4 @@
-# SimpleAuth
+# SimpleJwtAuth
 Short description and motivation.
 
 ## Usage
@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'simple_auth'
+gem 'simple_jwt_auth'
 ```
 
 And then execute:
@@ -18,12 +18,12 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install simple_auth
+$ gem install simple_jwt_auth
 ```
 
 in order to create updated migrations run
 ```bash
-$ rails simple_auth:install:migrations
+$ rails simple_jwt_auth:install:migrations
 ```
 
 then run
@@ -33,7 +33,7 @@ $ rails db:migrate
 
 in order to access gems provided routes add
 
-  mount ActualizeAuth::Engine, at: "/auth"
+  mount SimpleJwtAuth::Engine, at: "/auth"
 
 to top of routes in your rails project
 

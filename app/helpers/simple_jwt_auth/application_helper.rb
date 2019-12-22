@@ -1,6 +1,6 @@
 require_dependency "jwt"
 
-module SimpleAuth
+module SimpleJwtAuth
   module ApplicationHelper
     def current_user
       auth_headers = request.headers["Authorization"]
@@ -24,6 +24,6 @@ module SimpleAuth
       unless current_user
         render json: {}, status: :unauthorized
       end
-    end  
+    end
   end
 end

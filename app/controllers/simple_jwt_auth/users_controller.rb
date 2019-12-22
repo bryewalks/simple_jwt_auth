@@ -1,6 +1,6 @@
-require_dependency "simple_auth/application_controller"
+require_dependency "simple_jwt_auth/application_controller"
 
-module SimpleAuth
+module SimpleJwtAuth
   class UsersController < ApplicationController
     wrap_parameters :user, include: [:name, :email, :password, :password_confirmation]
   

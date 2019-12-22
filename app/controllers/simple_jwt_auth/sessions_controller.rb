@@ -1,7 +1,7 @@
-require_dependency "simple_auth/application_controller"
+require_dependency "simple_jwt_auth/application_controller"
 require_dependency "jwt"
 
-module SimpleAuth
+module SimpleJwtAuth
   class SessionsController < ApplicationController
     def create
       user = User.find_by(email: session_params[:email])

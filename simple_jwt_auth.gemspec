@@ -1,13 +1,13 @@
 $:.push File.expand_path("lib", __dir__)
 
 # Maintain your gem's version:
-require "simple_auth/version"
+require "simple_jwt_auth/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
-  spec.name        = "simple_auth"
-  spec.version     = SimpleAuth::VERSION
-  spec.authors     = ["Brye Walker"]
+  spec.name        = "simple_jwt_auth"
+  spec.version     = SimpleJwtAuth::VERSION
+  spec.authors     = ["brye"]
   spec.email       = ["bryewalks@gmail.com"]
   spec.homepage    = "https://github.com/bryewalks/simple_auth"
   spec.summary     = "JWT based authorization"

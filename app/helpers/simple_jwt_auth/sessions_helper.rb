@@ -1,4 +1,4 @@
-module SimpleAuth
+module SimpleJwtAuth
   module SessionsHelper
   end
 end
