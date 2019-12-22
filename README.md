@@ -31,6 +31,12 @@ to create updated migrations file and then
 $ rails db:migrate
 ```
 
+in order to access gems provided routes add
+
+  mount ActualizeAuth::Engine, at: "/auth"
+
+to top of routes in your rails project
+
 ## Contributing
 Contribution directions go here.
 
