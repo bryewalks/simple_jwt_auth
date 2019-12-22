@@ -7,11 +7,11 @@ require "simple_auth/version"
 Gem::Specification.new do |spec|
   spec.name        = "simple_auth"
   spec.version     = SimpleAuth::VERSION
-  spec.authors     = ["brye"]
+  spec.authors     = ["Brye Walker"]
   spec.email       = ["bryewalks@gmail.com"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of SimpleAuth."
-  spec.description = "TODO: Description of SimpleAuth."
+  spec.homepage    = ""
+  spec.summary     = "JWT based authorization"
+  spec.description = "JWT based authorization that includes current_user helper"
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -25,7 +25,9 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.add_dependency "rails", "~> 6.0.2", ">= 6.0.2.1"
+  spec.add_dependency "rails", "~> 6.0.2"
+  spec.add_dependency 'bcrypt', '~> 3.1.7'
+  spec.add_dependency 'jwt'
 
   spec.add_development_dependency "pg"
 end
