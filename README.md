@@ -21,12 +21,12 @@ Or install it yourself as:
 $ gem install simple_auth
 ```
 
-after install run
+in order to create updated migrations run
 ```bash
 $ rails simple_auth:install:migrations
 ```
 
-to create updated migrations file and then
+then run
 ```bash
 $ rails db:migrate
 ```
