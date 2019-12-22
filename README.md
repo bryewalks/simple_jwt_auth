@@ -1,8 +1,5 @@
 # SimpleJwtAuth
-Short description and motivation.
-
-## Usage
-How to use my plugin.
+This gem provides simple jwt authorization for rails API projects by giving you access to POST for users and sessions. Aswell as a current_user helper method.
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -21,24 +18,36 @@ Or install it yourself as:
 $ gem install simple_jwt_auth
 ```
 
-in order to create updated migrations run
+## Usage
+### Models
+After installation run 
 ```bash
 $ rails simple_jwt_auth:install:migrations
 ```
+this will create a user model in your rails application.
 
 then run
 ```bash
 $ rails db:migrate
 ```
-
+### Routes
 in order to access gems provided routes add
 ```bash
 mount SimpleJwtAuth::Engine, at: "/auth"
 ```
-to top of routes in your rails project
+to the top of your routes in your rails project
+### Creating Users
+Users can be created by making a POST request to
+https://localhost:3000/auth/users
+With name, email, password, and password_confirmation as params
 
-## Contributing
-Contribution directions go here.
+### Creating Sessions
+Sessions can be created by making a POST request to
+https://localhost:3000/auth/sessions
+with email and password as params.
+
+#### Logged in
+Add header called "Authorization" and set it to "Bearer <your jwt token here>" include this in any request you want the user to be logged in for.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

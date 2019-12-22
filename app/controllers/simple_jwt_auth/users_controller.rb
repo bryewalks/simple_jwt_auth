@@ -2,7 +2,6 @@ require_dependency "simple_jwt_auth/application_controller"
 
 module SimpleJwtAuth
   class UsersController < ApplicationController
-    wrap_parameters :user, include: [:name, :email, :password, :password_confirmation]
   
     def create
       user = User.new(user_params)
@@ -17,9 +16,7 @@ module SimpleJwtAuth
     private
 
     def user_params
-      params
-        .require(:user)
-        .permit(:name, :email, :password, :password_confirmation)
+      params.permit(:name, :email, :password, :password_confirmation)
     end 
   end
 end
