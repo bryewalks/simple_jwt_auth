@@ -32,9 +32,9 @@ $ rails db:migrate
 ```
 
 in order to access gems provided routes add
-
-  mount SimpleJwtAuth::Engine, at: "/auth"
-
+```bash
+mount SimpleJwtAuth::Engine, at: "/auth"
+```
 to top of routes in your rails project
 
 ## Contributing
