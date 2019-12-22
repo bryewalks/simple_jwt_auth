@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.version     = SimpleAuth::VERSION
   spec.authors     = ["Brye Walker"]
   spec.email       = ["bryewalks@gmail.com"]
-  spec.homepage    = ""
+  spec.homepage    = "https://github.com/bryewalks/simple_auth"
   spec.summary     = "JWT based authorization"
   spec.description = "JWT based authorization that includes current_user helper"
   spec.license     = "MIT"
