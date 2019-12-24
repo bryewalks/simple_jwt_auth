@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", "~> 6.0.2"
   spec.add_dependency 'bcrypt', '~> 3.1.7'
   spec.add_dependency 'jwt'
+  spec.add_dependency 'tty-file'
 
   spec.add_development_dependency "pg"
 end
