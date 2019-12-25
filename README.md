@@ -24,24 +24,13 @@ After installation run
 ```bash
 $ rails simple_jwt_auth:setup
 ```
-this will create a user model in your rails application. As well as creating a file for adding associations and user model methods at app/models/simple_jwt_auth/user.rb
+this will create a user model in your rails application. As well as creating a file for adding associations and user model methods at app/models/user.rb
 
 then run
 ```bash
 $ rails db:migrate
 ```
 
-In order to have belongs_to associations with user use:
-```bash
-belongs_to :user, :class_name => 'SimpleJwtAuth::User'
-```
-
-### Routes
-in order to access gems provided routes add
-```bash
-mount SimpleJwtAuth::Engine, at: "/auth"
-```
-to the top of your routes in your rails project
 ### Creating Users
 Users can be created by making a POST request to
 https://localhost:3000/auth/users
