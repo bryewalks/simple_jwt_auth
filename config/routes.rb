@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   scope :auth do
-    resources :users, only: [:create]
-    resources :sessions, only: [:create]
+    resource :user, only: [:create, :show]
+    resource :session, only: [:create]
   end
 end
