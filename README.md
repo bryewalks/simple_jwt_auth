@@ -43,6 +43,7 @@ with email and password as params.
 
 #### Logged in
 Add header called "Authorization" and set it to "Bearer #your-jwt-token-here" include this in any request you want the user to be logged in for.
-
+A GET request can then be made to https://localhost:3000/auth/user to return the current user object.
+ 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
