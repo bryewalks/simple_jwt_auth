@@ -17,9 +17,29 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    if current_user
+      user = User.find_by_id(current_user.id)
+      user.isPasswordReset = true
+      user.update(update_params)
+
+      if user.save
+        render json: {message: "User updated successfully"}, status: :ok
+      else
+        render json: {errors: user.errors.full_messages}, status: :bad_request
+      end
+    else
+      render json: {}, status: :unauthorized
+    end
+  end
+
   private
 
   def user_params
     params.permit(:name, :email, :password, :password_confirmation)
-  end 
+  end
+
+  def update_params
+    params.permit(:password, :password_confirmation)
+  end
 end
